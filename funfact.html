@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fun Facts About Space</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        button {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        #factDisplay {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fun Facts About Space</h1>
+        <button id="factButton">Show Random Fact</button>
+        <p id="factDisplay"></p>
+    </div>
+    <script>
+        const facts = [
+            "Space is so vast that it is believed to be infinite. The observable universe is about 93 billion light-years in diameter, but beyond that, we cannot see or measure.",
+            "Black holes are regions in space where the gravitational pull is so strong that nothing, not even light, can escape from them. They are formed when massive stars collapse under their own gravity.",
+            "There is a massive cloud of water vapor in space, located about 12 billion light-years away from Earth, containing 140 trillion times the amount of water in all of Earth's oceans combined.",
+            "According to Einstein's theory of relativity, time moves slower in stronger gravitational fields. This means that time passes differently for astronauts in space compared to people on Earth.",
+            "The coldest known place in the universe is the Boomerang Nebula, where temperatures drop to about -458 degrees Fahrenheit (-272 degrees Celsius), just a degree above absolute zero.",
+            "Larger galaxies can consume smaller ones in a process known as galactic cannibalism. The Milky Way is currently absorbing smaller galaxies, including the Sagittarius Dwarf Galaxy.",
+            "A neutron star is incredibly dense; just a sugar-cube-sized amount of material from one would weigh about as much as all of humanity combined.",
+            "The Great Attractor is a gravitational anomaly in intergalactic space that is pulling our Milky Way galaxy, along with many others, towards it at a speed of about 600 kilometers per second.",
+            "Unlike on Earth, where sound can travel through air, space is a vacuum, meaning there is no medium for sound waves to travel through. Therefore, space is completely silent.",
+            "The universe has been expanding since the Big Bang, and it continues to do so. Galaxies are moving away from each other, and the farther away a galaxy is, the faster it appears to be moving away from us."
+        ];
+
+        document.getElementById('factButton').addEventListener('click', function() {
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            document.getElementById('factDisplay').innerText = facts[randomIndex];
+        });
+    </script>
+</body>
+</html>
